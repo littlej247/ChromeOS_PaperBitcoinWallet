@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Bitcoin Paper Wallet Maker",
+  "short_name": "Wallet Maker",
+  "description": "Opensource Bitcoin Paper Wallet Maker",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+  "offline_enabled": true,
+
+  "icons": {
+    "16": "assets/Bitcoin_Logo16.png",
+    "128": "assets/Bitcoin_Logo128.png"
+  },
+  "permissions": [
+    "videoCapture",
+    "contextMenus"
+  ],
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

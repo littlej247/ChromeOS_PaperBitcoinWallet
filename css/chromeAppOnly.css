@@ -1,0 +1,20 @@
+
+    
+  .footer{
+   display: none;
+  }
+	.instructionsarea { 
+ 	  overflow-y: scroll; 
+	  height: 551px; 
+	}
+		
+	#paperkeyarea {
+  position: fixed;
+  top: 280px;
+  
+  }
+  	#paperBack {
+  position: fixed;
+  top: 280px;
+  
+  }

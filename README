@@ -1,10 +1,14 @@
-**** LOOKING FOR THE ZIP FILE TO DOWNLOAD? ************************************
-If you're on already here at https://github.com/cantonbecker/bitcoinpaperwallet
-Then just look above for the green button that says "Clone or download". 
-Click it and select 'Download ZIP'.
-*******************************************************************************
+**** THIS IS AN UNTESTED AND HEAVILY MODIFIED FORK ****
 
-*** bitcoinpaperwallet.com ***
+This project is a fork of bitcoinpaperwallet.com. It has been modified to be
+compatible as a packaged ChromeOS app with the intention of maintaining backwards
+compatibility as an esthetic client side web app. This is a personal project only
+for the purpose of self education in the development of ChromeOS apps.
+
+
+--------------------------------------------------------------
+--- The original bitcoinpaperwallet.com README continues below ---
+--------------------------------------------------------------
 
 This project is a fork of bitaddress.org, the original trustworthy
 JavaScript powered offline bitcoin address generator. 

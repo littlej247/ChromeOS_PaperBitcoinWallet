@@ -1,0 +1,164 @@
+var walletsJSONfile = { 
+  "default_design":"standard_bitcoin_design",
+  
+  
+  "coin_types":{
+    "bitcoin":{
+      "display_name":"Bitcoin",
+      "folder":"bitcoin",
+      "logo":"logo.png"
+    },
+    "dogecoin":{
+      "display_name":"Dodgecoin",
+      "folder":"alt-dogecoin",
+      "logo":"logo-alt-dogecoin.png"
+    },
+    "litecoin":{
+      "display_name":"Litecoin",
+      "folder":"alt-litecoin",
+      "logo":"logo-alt-litecoin.png"
+    },
+    "testnet":{
+      "display_name":"Testnet",
+      "folder":"alt-testnet",
+      "logo":"logo-alt-testnet.png"
+    }
+  },
+  
+  
+  "designs":{
+    
+    "standard_bitcoin_design":{
+      "coin_type": "bitcoin",
+      "folder_name": "bitcoin",
+      "dropdown_name": "Standard Bitcoin Design",
+      "multilanguage": true,
+      "dynamic_drawing": true,
+      "images": {
+        "sample": "finished-sample-sealed.jpg",
+        "front": "front-300dpi.jpg",
+        "back": "back-300dpi.jpg",
+        "seal": "front-seal.png"
+      },
+      "back_demonitation_options": true,
+      "back_message_options": true
+    },
+    "bitcoinCash":{
+      "coin_type": "bitcoin",
+      "folder_name": "bitcoinCash",
+      "dropdown_name": "Bitcoin Cash Design",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-bitcoincash.jpg",
+        "front": "front-300dpi-bitcoincash.jpg",
+        "back": "back-300dpi-bitcoincash.jpg",
+        "seal": "../bitcoin/front-seal.png"
+      },
+      "back_demonitation_options": true
+    },
+    "blackWhite":{
+      "coin_type": "bitcoin",
+      "folder_name": "blackWhite",
+      "dropdown_name": "Black & White Bitcoin",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-blackwhite.jpg",
+        "front": "front-300dpi-blackwhite.jpg",
+        "back": "back-300dpi-blackwhite.jpg"
+      }
+    },
+    "chinese-new-year":{
+      "coin_type": "bitcoin",
+      "folder_name": "chinese-new-year",
+      "dropdown_name": "Chinese New Year Bitcoin (Simplified Chinese)",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-chinese-new-year.jpg",
+        "front": "front-300dpi-chinese-new-year.jpg",
+        "back": "back-300dpi-chinese-new-year.jpg"
+      }
+    },
+    "traditional-chinese-new-year":{
+      "coin_type": "bitcoin",
+      "folder_name": "traditional-chinese-new-year",
+      "dropdown_name": "Chinese New Year Bitcoin (Traditional Chinese)",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-traditional-chinese-new-year.jpg",
+        "front": "front-300dpi-traditional-chinese-new-year.jpg",
+        "back": "back-300dpi-traditional-chinese-new-year.jpg"
+      }
+    },
+    "hobbit":{
+      "coin_type": "bitcoin",
+      "folder_name": "hobbit",
+      "dropdown_name": "'HobBitcoin' :)",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-hobbit.jpg",
+        "front": "front-300dpi-hobbit.jpg",
+        "back": "back-300dpi-hobbit.jpg"
+      }
+    },
+    "holiday":{
+      "coin_type": "bitcoin",
+      "folder_name": "holiday",
+      "dropdown_name": "Holiday / Christmas Bitcoin (English)",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-holiday.jpg",
+        "front": "front-300dpi-holiday.jpg",
+        "back": "back-300dpi-holiday.jpg",
+        "seal": "../bitcoin/front-seal.png"
+      },
+      "back_demonitation_options": true
+    },
+    "dogecoine-standard":{
+      "coin_type": "dogecoin",
+      "folder_name": "alt-dogecoin",
+      "dropdown_name": "Dogecoin DOGE",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-alt-dogecoin.jpg",
+        "front": "front-300dpi-alt-dogecoin.jpg",
+        "back": "back-300dpi-alt-dogecoin.jpg"
+      },
+      "enabled": false
+    },
+    "counterparty":{
+      "coin_type": "bitcoin",
+      "folder_name": "counterparty",
+      "dropdown_name": "Counterparty XCP",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-counterparty.jpg",
+        "front": "front-300dpi-counterparty.jpg",
+        "back": "back-300dpi-counterparty.jpg"
+      }
+    },
+    "litecoin":{
+      "coin_type": "litecoin",
+      "folder_name": "alt-litecoin",
+      "dropdown_name": "Litecoin LTC",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-alt-litecoin.jpg",
+        "front": "front-300dpi-alt-litecoin.jpg",
+        "back": "back-300dpi-alt-litecoin.jpg"
+      },
+      "enabled": false
+    },
+    "testnet":{
+      "coin_type": "testnet",
+      "folder_name": "alt-testnet",
+      "dropdown_name": "'Testnet'",
+      "multilanguage": false,
+      "images": {
+        "sample": "finished-sample-alt-testnet.jpg",
+        "front": "front-300dpi-alt-testnet.jpg",
+        "back": "back-300dpi-alt-testnet.jpg"
+      },
+      "enabled": false
+    }
+  }
+};
