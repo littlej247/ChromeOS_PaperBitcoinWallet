@@ -1,0 +1,32 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+This project is a fork from BitCoinPaperWallet.com by Canton Becker, see readme for details. Initial changes are in comparison to that project.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+### Added
+- https://github.com/showdownjs/showdown .md file support
+
+### Changed
+- languages.json formatting to meet https://developer.chrome.com/extensions/i18n#locales-usage standard
+
+## [0.0.1] - 2014-05-31
+### Added
+- Forked bitcoinPaperWallet.com
+- CSPfixes.js to contain js commands that can't remain in HTML file
+- CSP_Alert() dialog for custom dialogs
+- Wallet designs now have individual paramiters in for options like multi-language, denomination, etc.
+- Info dialog for accessing Readme File and footer links
+
+### Changed
+- Libraries are divided into individual files
+- Changed all alerts, confirm, & block dialogs to use CSP_Alert()
+- QR Scanner dialog for better appearance
+- Fixed camera stop bug
+- Some language data moved to .json file
+
+### Removed
+- Multi-currency support until bitcoin.js intigration can be resolved
+- Async unit tests link until javascript memory leak is resolved. This command can still be run manually via "ninja.unitTests.runAsynchronousTests()" in the console
