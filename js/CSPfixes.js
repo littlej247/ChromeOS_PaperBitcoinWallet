@@ -41,14 +41,53 @@ document.getElementById("CSP-printShiftPlus").onclick = function() { printShift(
 //----------------Instructions Page------------
 document.getElementById("designPicker").onchange = function() {  setDesign(this.value, );};
 document.getElementById("langPicker").onchange = function() {  setDesign(window.designChoice, this.value);};
+var aboutWindow;
 document.getElementById("CSP-AboutButton").onclick = function() { 
-  document.getElementById("CSP-dialog-popup").className = "dialog-popup dialog-popup-large"
-  var aboutBody = "<textarea readonly id='readMeTextArea' style='width: 100%; height: 300px'>Loading...</textarea>  "
-    + "  <div class='footer' style='display:inherit;margin:0px;color:inherit;'>" + document.getElementById("footer").innerHTML + "</div>"
-  CSP_Alert("About",aboutBody,"ok");
-  $("#readMeTextArea").load("README"); 
-};
+  console.log("i'm reading");
+ //showAboutWindow();
 
+ 
+   chrome.app.window.create(
+    'about.html',
+    {
+      id: 'aboutWindow',
+      frame: {
+        type: 'chrome',
+        color: '#f7931a'
+      },
+      innerBounds: {
+        width: 620,
+        height: 650,
+        maxWidth: 1010,
+        minHeight: 600
+      },
+      resizable: true
+      
+    }
+  );
+ 
+ 
+ 
+ 
+}
+
+/*
+document.getElementById("CSP-AboutButton").onclick = function() { 
+  //$("#readMeTextArea").load("README"); 
+  $.get("README.md", function(data, status){
+    var converter = new showdown.Converter();
+    
+    document.getElementById("CSP-dialog-popup").className = "dialog-popup dialog-popup-large"
+    var aboutBody = "<div style='   max-height: 300px;    border: 2px solid #eee;    overflow-y: scroll;    padding: 7px; background-color: white;' > " + converter.makeHtml(data) + "</div>"
+      + "  <div class='footer' style='display:inherit;margin:0px;color:inherit;'>" + document.getElementById("footer").innerHTML + "</div>"
+    document.getElementById("CSP-alertText").innerHTML = aboutBody;
+    CSP_Alert("About",aboutBody,"ok");
+  
+    document.getElementsByClassName("CSP-Basic")[1].onclick = function() {  ninja.unitTests.runSynchronousTests();};
+        
+  });
+};
+*/
 //----------------Calibrate Page---------------
 document.getElementsByClassName("print")[0].onclick = function() {  doPrint('calibration');};
 
@@ -124,7 +163,6 @@ document.getElementById("CSP-DisplayCompressed").onclick = function() {
 
 
 //------------------Added functions----------------
-
 
 
 

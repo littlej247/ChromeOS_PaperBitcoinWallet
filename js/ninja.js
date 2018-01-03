@@ -994,7 +994,11 @@
 (function (ninja) {
 	var ut = ninja.unitTests = {
 		runSynchronousTests: async function () {
-			CSP_Alert("One Moment Please . . .","Doing something intense... Not sure what exactly..");  //document.getElementById("busyblock").className = "busy";
+			//CSP_Alert("One Moment Please . . .","Doing something intense... Not sure what exactly..");  //document.getElementById("busyblock").className = "busy";
+			//CSP_Alert("Synchronous Test Results","<textarea readonly id='readMeTextArea' style='width: 100%; height: 400px'>Loading...\n</textarea>","ok");
+    document.getElementById("CSP-alertTitle").innerHTML="Synchronous Test Results"; 
+    document.getElementById("CSP-alertText").innerHTML = "<textarea readonly id='readMeTextArea' style='width: 100%; height: 400px'>Loading...\n</textarea>";
+      
 			//var div = document.createElement("div");
 			//div.setAttribute("class", "unittests");
 			//div.setAttribute("id", "unittests");
@@ -1018,18 +1022,21 @@
 					var passFailStr = "<b>FAIL " + exceptionMsg + "</b>";
 				}
 				testCount++;
-				testResults += test + ": " + passFailStr + "\n";
+				document.getElementById("readMeTextArea").value += test + ": " + passFailStr + "\n";
+				console.log(test + ": " + passFailStr);
+				//document.getElementById('readMeTextArea').style.display = 'none';
+        //document.getElementById('readMeTextArea').style.display = 'block';
 			}
-			testResults += passCount + " of " + testCount + " synchronous tests passed";
+			document.getElementById("readMeTextArea").value += passCount + " of " + testCount + " synchronous tests passed";
 			if (passCount < testCount) {
-				testResults += "<b>" + (testCount - passCount) + " unit test(s) failed</b>";
+				document.getElementById("readMeTextArea").value += "<b>" + (testCount - passCount) + " unit test(s) failed</b>";
 			}
 			//div.innerHTML = "<a name=\"tests\"></a><h3>Unit Tests</h3><div id=\"unittestresults\">" + testResults + "<br/><br/></div>";
 			//document.body.appendChild(div);
-			await CSP_alertPromise.resolve(true);  //document.getElementById("busyblock").className = "";
-			document.getElementById("CSP-dialog-popup").className = "dialog-popup dialog-popup-large";
-			CSP_Alert("Synchronous Test Results","<textarea readonly id='readMeTextArea' style='width: 100%; height: 400px'>Loading...</textarea>","ok");
-			document.getElementById("readMeTextArea").value = testResults;
+	//await CSP_alertPromise.resolve(true);  //document.getElementById("busyblock").className = "";
+		//	document.getElementById("CSP-dialog-popup").className = "dialog-popup dialog-popup-large";
+			//CSP_Alert("Synchronous Test Results","<textarea readonly id='readMeTextArea' style='width: 100%; height: 400px'>Loading...</textarea>","ok");
+			//document.getElementById("readMeTextArea").value = testResults;
 
 
 
